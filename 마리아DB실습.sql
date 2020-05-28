@@ -17,7 +17,7 @@ create table member(
     id VARCHAR(30) not null,
     pass VARCHAR(30) not null,
     name varchar(member30) not null,
-    regidate datetime default CURRENT_TIMESTAMP, /* 현재시간을 디폴트로 사용 
+    regidate datetime DEFAULT CURRENT_TIMESTAMP, /* 현재시간을 디폴트로 사용 
 		 														datatime : 날짜와 시간을 동시에 표현 할 수 있는 자료형
 			 													*/
     primary key (id)
