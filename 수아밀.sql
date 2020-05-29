@@ -54,3 +54,19 @@ CREATE TABLE multi_board (
 	 sfile VARCHAR(30) NOT NULL,
     primary key(idx)
 );
+
+ALTER TABLE multi_board ADD CONSTRAINT fk_board_member
+	FOREIGN KEY (id) REFERENCES membership (id);
+	
+INSERT INTO multi_board (title, content, id, bname)
+	VALUES ('공지더미1', '더미내용1', 'admin', 'notice');
+INSERT INTO multi_board (title, content, id, bname)
+	VALUES ('공지더미2', '더미내용2', 'admin', 'notice');
+INSERT INTO multi_board (title, content, id, bname)
+	VALUES ('공지더미3', '더미내용3', 'admin', 'notice');
+INSERT INTO multi_board (title, content, id, bname)
+	VALUES ('자유게시판더미1', '더미내용1', 'admin', 'freeboard');
+INSERT INTO multi_board (title, content, id, bname)
+	VALUES ('자유게시판더미2', '더미내용2', 'admin', 'freeboard');
+INSERT INTO multi_board (title, content, id, bname)
+	VALUES ('자유게시판더미3', '더미내용3', 'admin', 'freeboard');
